@@ -1,7 +1,7 @@
 package dave;
 
-// Import log4j classes.
-import org.apache.log4j.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Hello world!
@@ -13,14 +13,9 @@ public class App
     {
 
    // get a logger instance named "com.foo"
-   Logger  logger = Logger.getLogger("com.foo");
+   Logger  logger = LoggerFactory.getLogger("com.foo");
 
-   // Now set its level. Normally you do not need to set the
-   // level of a logger programmatically. This is usually done
-   // in configuration files.
-   logger.setLevel(Level.INFO);
-
-   Logger barlogger = Logger.getLogger("com.foo.Bar");
+   Logger barlogger = LoggerFactory.getLogger("com.foo.Bar");
 
    // This request is enabled, because WARN >= INFO.
    logger.warn("Low fuel level.");
