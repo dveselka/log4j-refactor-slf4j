@@ -1,5 +1,8 @@
 package dave;
 
+// Import log4j classes.
+import org.apache.log4j.*;
+
 /**
  * Hello world!
  *
